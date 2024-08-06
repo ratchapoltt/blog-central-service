@@ -23,7 +23,9 @@
       "@app/core": ["src/app/core"],
       "@app/core/*": ["src/app/core/*"],
       "@app/dto": ["src/app/dtos"],
-      "@app/dto/*": ["src/app/dtos/*"]
+      "@app/dto/*": ["src/app/dtos/*"],
+      "@environment": ["src/environments"],
+      "@environment/*": ["src/environments/*"]
     },
     "removeComments": true,
     "resolveJsonModule": true,
