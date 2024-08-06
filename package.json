@@ -17,13 +17,26 @@
     "lint:fix": "eslint ./**/*.{json,json5,jsonc,md} --fix"
   },
   "devDependencies": {
+    "@types/dotenv-webpack": "7.0.7",
+    "@types/eslint": "9.6.0",
     "@types/node": "22.1.0",
+    "@types/source-map-support": "0.5.10",
+    "clean-webpack-plugin": "4.0.0",
+    "copy-webpack-plugin": "12.0.2",
+    "cross-env": "7.0.3",
+    "dotenv": "16.4.5",
+    "dotenv-webpack": "8.1.0",
     "eslint": "8.57.0",
     "eslint-plugin-jsonc": "2.16.0",
     "eslint-plugin-markdownlint": "0.6.0",
     "jsonc-eslint-parser": "2.4.0",
+    "rimraf": "6.0.1",
+    "source-map-support": "0.5.21",
+    "terser-webpack-plugin": "5.3.10",
+    "ts-loader": "9.5.1",
     "ts-node": "10.9.2",
     "tsconfig-paths": "4.2.0",
-    "typescript": "5.3.3"
+    "typescript": "5.3.3",
+    "webpack": "5.93.0"
   }
 }
