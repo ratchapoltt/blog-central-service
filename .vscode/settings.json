@@ -1,8 +1,11 @@
 {
   "cSpell.words": [
+    "commitlint",
     "cqrs",
     "dtos",
     "nestjs",
+    "precommit",
+    "prepush",
     "ratchapol",
     "ratchapoltt",
     "sonarjs",
