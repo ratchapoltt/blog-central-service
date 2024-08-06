@@ -2,6 +2,15 @@
 
 This service is responsible for managing the blog posts and comments.
 
+## Table of Contents
+
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installing](#installing)
+- [Scripts](#scripts)
+  - [Linter and Formatter the code](#linter-and-formatter-the-code)
+- [Authors](#authors)
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running
