@@ -4,6 +4,9 @@ node_modules/*
 # Complie directory
 dist/*
 
+# Test directory
+coverage/*
+
 # Environment files
 .env
 .env.*

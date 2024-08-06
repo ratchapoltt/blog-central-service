@@ -4,5 +4,8 @@ node_modules/*
 # Complie directory
 dist/*
 
+# Test directory
+coverage/*
+
 # Json files
 package-lock.json
