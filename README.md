@@ -8,6 +8,9 @@ This service is responsible for managing the blog posts and comments.
   - [Prerequisites](#prerequisites)
   - [Installing](#installing)
 - [Scripts](#scripts)
+  - [Build the application](#build-the-application)
+  - [Running the application](#running-the-application)
+  - [Test the application](#test-the-application)
   - [Linter and Formatter the code](#linter-and-formatter-the-code)
 - [Authors](#authors)
 
@@ -42,6 +45,64 @@ A step by step series of examples that tell you how to get a development env run
    ```
 
 ## Scripts
+
+### Build the application
+
+```bash
+# Local mode
+npm run build
+
+# Development mode
+npm run build:development
+
+# Sit mode
+npm run build:sit
+
+# Uat mode
+npm run build:uat
+
+# Production mode
+npm run build:production
+
+# Test mode
+npm run build:test
+
+```
+
+### Running the application
+
+```bash
+# Local mode
+npm run start
+
+# Local mode with debug
+npm run start:debug
+
+# Development mode
+npm run start:development
+
+# Development mode with debug
+npm run start:development-debug
+```
+
+### Test the application
+
+```bash
+# All tests
+npm run test
+
+# Unit test
+npm run test:unit
+
+# Unit test with watch mode
+npm run test:unit-watch
+
+# Unit test with coverage
+npm run test:unit-coverage
+
+# E2E test
+npm run test:e2e
+```
 
 ### Linter and Formatter the code
 
