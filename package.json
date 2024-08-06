@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "name": "blog-central-service",
-  "description": "This service is responsible for managing the blog posts and comments.",
+  "description": "This service is responsible for managing the blog posts and comments",
   "author": "ratchapoltt",
   "repository": {
     "type": "git",
@@ -11,5 +11,15 @@
   "engines": {
     "node": "20.15.0",
     "npm": "10.7.0"
+  },
+  "scripts": {
+    "lint": "eslint ./**/*.{json,json5,jsonc,md} --quiet --max-warnings 10",
+    "lint:fix": "eslint ./**/*.{json,json5,jsonc,md} --fix"
+  },
+  "devDependencies": {
+    "eslint": "8.57.0",
+    "eslint-plugin-jsonc": "2.16.0",
+    "eslint-plugin-markdownlint": "0.6.0",
+    "jsonc-eslint-parser": "2.4.0"
   }
 }
