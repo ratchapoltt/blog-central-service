@@ -1,0 +1,21 @@
+name: Test the code
+on:
+  push:
+    branches: ["main"]
+jobs:
+  unit-test:
+    runs-on: windows-latest
+    strategy:
+      matrix:
+        node-version: [20.15.0]
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install dependencies
+        run: npm ci
+      - name: Test the code
+        run: npm run test:unit
