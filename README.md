@@ -44,6 +44,22 @@ A step by step series of examples that tell you how to get a development env run
    npm install
    ```
 
+3. Install git hooks for the project
+
+   Run the following command to install the git hooks:
+
+   ```bash
+   npm run install:husky
+   ```
+
+4. Copy the environment file
+
+   Run the following command to copy the environment file:
+
+   ```bash
+   cp environments/.env.example environments/.env.local
+   ```
+
 ## Scripts
 
 ### Build the application
