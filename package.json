@@ -1,0 +1,15 @@
+{
+  "version": "1.0.0",
+  "name": "blog-central-service",
+  "description": "This service is responsible for managing the blog posts and comments.",
+  "author": "ratchapoltt",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ratchapoltt/blog-central-service.git"
+  },
+  "private": true,
+  "engines": {
+    "node": "20.15.0",
+    "npm": "10.7.0"
+  }
+}
