@@ -1,8 +1,6 @@
 {
   "exclude": [
     ".jest/**/*",
-    "coverage/**/*",
-    "dist/**/*",
     "e2e/**/*",
     "node_modules/**/*",
     "**/*spec.ts",
