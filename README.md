@@ -12,7 +12,9 @@ This service is responsible for managing the blog posts and comments.
   - [Running the application](#running-the-application)
   - [Test the application](#test-the-application)
   - [Linter and Formatter the code](#linter-and-formatter-the-code)
+- [Release History](#release-history)
 - [Authors](#authors)
+- [License](#license)
 
 ## Getting Started
 
@@ -24,7 +26,14 @@ on your local machine for development and testing purposes.
 What things you need to install the software and how to install them.
 
 1. Visual Studio Code - [Download](https://code.visualstudio.com/)
-2. Node.js (v20.15.0) - [Download](https://nodejs.org/en/blog/release/v20.15.0)
+2. Node.js (v20.15.0) - [Download](https://n15.0)
+3. NPM (v10.7.0)
+
+   Run the following command to install the NPM:
+
+   ```bash
+    npm install -g npm@10.7.0
+   ```
 
 ### Installing
 
@@ -130,6 +139,15 @@ npm run lint
 npm run lint:fix
 ```
 
+## Release History
+
+- 0.0.1
+  - Work in progress
+
 ## Authors
 
 - Ratchapol Thongta - [@ratchapoltt](https://www.github.com/ratchapoltt)
+
+## License
+
+Copyright © 2024, Ratchapol Thongta.
