@@ -3,13 +3,16 @@
     "commitlint",
     "cqrs",
     "dtos",
+    "headerapikey",
+    "mikro",
     "nestjs",
     "precommit",
     "prepush",
     "ratchapol",
     "ratchapoltt",
     "sonarjs",
-    "thongta"
+    "thongta",
+    "websockets"
   ],
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit"
