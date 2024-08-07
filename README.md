@@ -27,6 +27,12 @@ What things you need to install the software and how to install them.
 
 1. Visual Studio Code - [Download](https://code.visualstudio.com/)
 2. Node.js (v20.15.0) - [Download](https://n15.0)
+   or use the following command to install the Node.js via NVM:
+
+   ```bash
+   nvm install 20.15.0
+   ```
+
 3. NPM (v10.7.0)
 
    Run the following command to install the NPM:
