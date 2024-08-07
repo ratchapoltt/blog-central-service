@@ -1,0 +1,29 @@
+name: Build
+on:
+  push:
+    branches: ["main"]
+jobs:
+  environment:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4
+      - name: Copy the environment file
+        run: cp environments/.env.example environments/.env.test
+  lint:
+    runs-on: windows-latest
+    needs: environment
+    strategy:
+      matrix:
+        node-version: [20.15.0]
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install dependencies
+        run: npm ci
+      - name: Build the application
+        run: npm run build:test
