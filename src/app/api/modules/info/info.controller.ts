@@ -1,8 +1,10 @@
 import { InformationApplicationResponse } from "@app/dto";
 import { Controller, Get, HttpCode, HttpStatus } from "@nestjs/common";
+import { ApiTags } from "@nestjs/swagger";
 
 import { InfoService } from "./info.service";
 
+@ApiTags("Info")
 @Controller()
 export class InfoController {
   private readonly service: InfoService;
