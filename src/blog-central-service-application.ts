@@ -1,3 +1,4 @@
+import { OpenApiService } from "@app/core";
 import { environment } from "@environment";
 import { Logger } from "@nestjs/common";
 import { NestFactory } from "@nestjs/core";
@@ -11,6 +12,8 @@ export class BlogCentralServiceApplication {
   public static async run(): Promise<void> {
     try {
       const application: NestExpressApplication = await NestFactory.create(AppModule);
+
+      application.get(OpenApiService).run(application);
 
       await application.init();
       await application.listen(environment.server.port, environment.server.hostname);
