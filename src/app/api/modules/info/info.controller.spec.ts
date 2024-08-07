@@ -11,16 +11,17 @@ describe("InfoController", (): void => {
   let controller: InfoController;
 
   beforeEach(async (): Promise<void> => {
-    const application: TestingModule = await Test.createTestingModule({
+    const module: TestingModule = await Test.createTestingModule({
       imports: [CqrsModule],
       controllers: [InfoController],
       providers: [GetInfoHandler, InfoService]
     }).compile();
 
-    application.useLogger(false);
-    application.init();
+    module.useLogger(false);
 
-    controller = application.get(InfoController);
+    module.init();
+
+    controller = module.get(InfoController);
   });
 
   it("Should be defined", (): void => {
