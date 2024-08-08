@@ -2,7 +2,9 @@
   "exclude": [
     ".jest/**/*",
     "e2e/**/*",
+    "migrations/**/*",
     "node_modules/**/*",
+    "seeds/**/*",
     "**/*spec.ts",
     "jest.config.ts"
   ],
