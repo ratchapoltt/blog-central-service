@@ -1,7 +1,7 @@
 export class EnvironmentSwagger {
   public readonly enabled: boolean;
 
-  public constructor(data: Required<EnvironmentSwagger>) {
-    Object.assign(this, data);
+  public constructor(init: Required<EnvironmentSwagger>) {
+    Object.assign(this, init);
   }
 }

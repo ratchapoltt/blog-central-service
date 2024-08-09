@@ -12,7 +12,7 @@ export class Environment {
   public readonly logger: EnvironmentLogger;
   public readonly swagger: EnvironmentSwagger;
 
-  public constructor(data: Required<Environment>) {
-    Object.assign(this, data);
+  public constructor(init: Required<Environment>) {
+    Object.assign(this, init);
   }
 }

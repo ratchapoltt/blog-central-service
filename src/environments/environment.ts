@@ -2,7 +2,11 @@ import {
   Environment,
   EnvironmentApplication,
   EnvironmentDatabase,
+  EnvironmentDatabaseDiscovery,
+  EnvironmentDatabaseGenerator,
+  EnvironmentDatabaseMigration,
   EnvironmentDatabaseSSL,
+  EnvironmentDatabaseSeeder,
   EnvironmentLogger,
   EnvironmentLoggerStream,
   EnvironmentServer,
@@ -34,7 +38,45 @@ export const environment: Environment = new Environment({
     ssl: new EnvironmentDatabaseSSL({
       rejectUnauthorized: process.env.DATABASE_SSL_REJECT_UNAUTHORIZED === "true"
     }),
-    isMigration: process.env.DATABASE_IS_MIGRATION === "true"
+    discovery: new EnvironmentDatabaseDiscovery({
+      disableDynamicFileAccess: true
+    }),
+    generator: new EnvironmentDatabaseGenerator({
+      run: process.env.DATABASE_GENERATOR_RUN === "true",
+      migration: new EnvironmentDatabaseMigration({
+        path: "./migrations",
+        fileName: (timestamp: string): string => {
+          return `${timestamp}-migration`;
+        },
+        emit: "ts",
+        tableName: "migrations",
+        transactional: true,
+        disableForeignKeys: false,
+        allOrNothing: true,
+        dropTables: false,
+        safe: false,
+        snapshot: false
+      }),
+      seeder: new EnvironmentDatabaseSeeder({
+        path: "./seeds",
+        emit: "ts",
+        fileName: (className: string): string => {
+          return `${className.replaceAll(/([\da-z])([A-Z])/g, "$1-$2").toLowerCase()}`;
+        },
+        defaultSeeder: "InitialSeeder"
+      })
+    }),
+    allowGlobalContext: false,
+    forceUndefined: false,
+    forceUtcTimezone: true,
+    forceEntityConstructor: false,
+    validate: true,
+    strict: true,
+    validateRequired: true,
+    debug: process.env.DATABASE_DEBUG?.split(",").map((value: string): string => {
+      return value.trim();
+    }),
+    verbose: false
   }),
   logger: new EnvironmentLogger({
     level: process.env.LOGGER_LEVEL,
